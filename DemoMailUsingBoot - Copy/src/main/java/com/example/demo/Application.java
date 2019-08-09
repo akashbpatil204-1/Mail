@@ -27,24 +27,13 @@ public class Application implements CommandLineRunner {
 
 		System.out.println("Sending Email...");
 
-		sendEmail();
+		
 		// sendEmailWithAttachment();
 
 		System.out.println("OTP Sent");
 
 	}
 
-	void sendEmail() {
-		// System.out.println("send Mail method");
-
-		SimpleMailMessage msg = new SimpleMailMessage();
-		msg.setTo("divyasaivyshnavi.mamidi@publicissapient.com");
-		msg.setSubject("OTP For Forgot Password");
-		String otp = String.valueOf((long) (Math.random() * 9000) + 1000);
-		msg.setText("Your OTP is :" + otp);
-
-		javaMailSender.send(msg);
-
-	}
+	
 
 }
